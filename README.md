@@ -1,10 +1,24 @@
 # HERE-traffic-speed-data-exploration
 
-INRIX is a private company headquartered in Kirkland, Washington. It provides location-based data such as traffic and parking. Here Technologies (trading as Here) is a Netherlands-based company that provides mapping and location data and related services to individuals and companies. The project utilized historical speed data from both INRIX and HERE for congestion prediction, data evaluation and robustness check.
+The data from HERE shares a similar structure with INRIX. It is also TMC-based. The time range of HERE data available are from July 2019 to August 2020. Total number of TMCs recorded is around 6300. The size of the data is 53 GB. The speed is in kilometers per hour, based on each TMC segment. Unlike INRIX, missing values are not observed in HERE because speeds are automatically filled. The summary page of the downloaded data is shown below. 
 
-TMC segments are further classified into different levels based on their speed and volume by both INRIX and HERE. The locations of the TMC with data coverage is shown below. It is worth noting that neither INRIX and HERE provides speed data on low order roads such as private streets, neighborhood roads, etc. 
-![image](https://user-images.githubusercontent.com/46463367/197094385-81ad46f7-8ae0-4256-8682-fc5d755aa4f7.png)
+![image](https://user-images.githubusercontent.com/46463367/197094744-73d8f5fd-9032-4e7a-96f8-1bf95462d68b.png)
 
-Figure. TMC with speed data by different levels of roads in downtown Houston
+Figure. Summary information of HERE data. 
 
-The data summary and key differences in terms of the information provided are discussed in this section. A more detailed comparison in terms of the speed patterns are discussed in the Traffic Patterns section. 
+The main columns are
+●	Average speed (kph): The speed collected by HERE (kph).
+●	Free flow (kph): The free flow speed estimated by HERE. 
+●	Functional class: It reflects traffic speed and volume. This is similar to the column “FRCLevel” defined by INRIX.
+○	1: a road with high volume, maximum speed traffic
+○	2: a road with high volume, high speed traffic
+○	3: a road with high volume traffic
+○	4: a road with high volume traffic at moderate speeds between neighborhoods
+○	5: a road whose volume and traffic flow are below the level of any other functional class
+The distribution of the length of the TMC in miles is shown below. As can be indicated by the median and the tail of the distribution, the length of the TMC used in HERE is longer than that in INRIX.
+
+![image](https://user-images.githubusercontent.com/46463367/197094798-e56fe548-34bf-498e-8c9e-0e93507f338b.png)
+ 
+Figure. The distribution of the length (miles) of the TMC
+
+
