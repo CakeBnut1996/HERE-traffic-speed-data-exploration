@@ -7,14 +7,16 @@ The data from HERE shares a similar structure with INRIX. It is also TMC-based. 
 Figure. Summary information of HERE data. 
 
 The main columns are
-●	Average speed (kph): The speed collected by HERE (kph).
-●	Free flow (kph): The free flow speed estimated by HERE. 
-●	Functional class: It reflects traffic speed and volume. This is similar to the column “FRCLevel” defined by INRIX.
-○	1: a road with high volume, maximum speed traffic
-○	2: a road with high volume, high speed traffic
-○	3: a road with high volume traffic
-○	4: a road with high volume traffic at moderate speeds between neighborhoods
-○	5: a road whose volume and traffic flow are below the level of any other functional class
+- Average speed (kph): The speed collected by HERE (kph).
+- Free flow (kph): The free flow speed estimated by HERE. 
+- Functional class: It reflects traffic speed and volume. This is similar to the column “FRCLevel” defined by INRIX.
+
+1: a road with high volume, maximum speed traffic
+2: a road with high volume, high speed traffic
+3: a road with high volume traffic
+4: a road with high volume traffic at moderate speeds between neighborhoods
+5: a road whose volume and traffic flow are below the level of any other functional class
+
 The distribution of the length of the TMC in miles is shown below. As can be indicated by the median and the tail of the distribution, the length of the TMC used in HERE is longer than that in INRIX.
 
 ![image](https://user-images.githubusercontent.com/46463367/197094798-e56fe548-34bf-498e-8c9e-0e93507f338b.png)
